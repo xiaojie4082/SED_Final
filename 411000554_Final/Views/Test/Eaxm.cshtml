@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Eaxm";
+}
+
+<h2>Eaxm</h2>
+
+<p>姓名:陳秉杰<br />學號:411000554<br />最喜歡的水果:<br /></p>
+
+@{
+    string[] fruits = { "蘋果", "香蕉", "荔枝", "鳳梨", "西瓜" };
+}
+
+<ol>
+    @foreach (string item in fruits)
+    {
+        <li>@item</li>
+    }
+</ol>
+
+<hr />
+
+@{
+    var t = 1;
+}
+
+<div>
+    @foreach (string item in fruits)
+    {
+        <p>@t. @item</p>
+        t++;
+    }
+</div>
